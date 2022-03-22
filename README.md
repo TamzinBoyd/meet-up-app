@@ -1,5 +1,9 @@
 - Create card styling wrapper then use this to wrap other components
 - Also create a layout component which wraps the main content and routing, allocating a card styling to each using props.children inbuilt feature
 - So App just focuses on rendering the routing
-- Create Meet Up form and render this in New Meet Up page (wrap in Card)
+- Create form and render this in New Meet Up page (wrap in Card)
 - Get user input from form. Prevent default on form submitting as this would send a HTML request, want to do this later ourselves. UseRef feature to access the input DOM element and access the value entered
+- Create a real time database in Firebase to use for API requests
+- Where render form, created a function to handle.. & pass in data as a a paramter
+- Trigger navigation once http request has been sent on the form, using Router and useHistory method, manipulate the browser history to nagivate to homepage once the HTTP request is completed (newMeetUp page)
+- HTTP request to load data from backend. Learnt that fetch rquest returns a promise and the Js won't wait for promise to complete. Can't use Async as entire componenet would return a promise, so wouldn't qualify as a valid React component. Needs to return JSX. To overcome instead useState to just generate when response from promise is returned.
