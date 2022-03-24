@@ -4,7 +4,6 @@ import AllMeetUpsPage from "./pages/AllMeetUps";
 import NewMeetUpsPage from "./pages/NewMeetUp";
 import Favourites from "./pages/Favourites";
 import { Switch } from "react-router-dom";
-import MainNav from "./components/layout/MainNav";
 import Layout from "./components/layout/Layout";
 
 const App = () => {

@@ -15,10 +15,10 @@ const NewMeetUpsPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-      }.then(() => {
-        history.replace("/");
-      })
-    );
+      }
+    ).then(() => {
+      history.replace("/");
+    });
   };
   return (
     <div>

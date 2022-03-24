@@ -7,3 +7,10 @@
 - Where render form, created a function to handle.. & pass in data as a a paramter
 - Trigger navigation once http request has been sent on the form, using Router and useHistory method, manipulate the browser history to nagivate to homepage once the HTTP request is completed (newMeetUp page)
 - HTTP request to load data from backend. Learnt that fetch rquest returns a promise and the Js won't wait for promise to complete. Can't use Async as entire componenet would return a promise, so wouldn't qualify as a valid React component. Needs to return JSX. To overcome instead useState to just generate when response from promise is returned.
+- Set useEffect so fetch request only runs when page first loads, setting isLoading to true then false to avoid infinate loop
+- Component expects array but nested object is returned from fetch request. For loop over the keys within the object, create new object for each key & access nested object for each key copy (with spread operator) the key value pairs into new object.
+- Favourites button to add meet up to Favourites page (and unfavourite). Page will need to update to useState. Would make App too big to manage state here, harder to upscale website & creates a long chain of props, so Context is needed to make prop available for all.
+- Created separate js file to manage createContext called store. Generate Context with an object and pass down props via Provider component.
+- As State doesn't update instantly behind the scenes and to this effects when/how to get the favourites array. instead we pass it a function, it takes previous state as a parameter and adds on the new favouriteMeetup
+- Created 3 handler functions to manage favourites list. As they are in Context file they will be available throughout the app within components that are interested. Wrap components in contextProvider within index.js file
+- Favourites button - needs to recognise if item is already favourtied. useContext in meetUpItem file to access the Context object and methods. Click event on button.
