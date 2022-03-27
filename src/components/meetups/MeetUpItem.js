@@ -4,6 +4,7 @@ import Card from "../ui/Card";
 import FavouritesContext from "../../store/favourites-context";
 
 const MeetUpItem = (props) => {
+  // access globally available props
   const favouritesCtx = useContext(FavouritesContext);
 
   const itemIsFAvourite = favouritesCtx.itemIsFAvourite(props.id);
